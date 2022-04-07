@@ -1,0 +1,16 @@
+{
+  "name": "carelulu-todo",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "start": "lerna run --parallel start",
+    "lint": "lerna run --parallel lint"
+  },
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  }
+}

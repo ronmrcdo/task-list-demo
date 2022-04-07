@@ -1,0 +1,52 @@
+{
+	"parser": "@babel/eslint-parser",
+	"extends": ["airbnb-base", "plugin:prettier/recommended"],
+	"env": {
+		"commonjs": true,
+		"es6": true,
+		"node": true,
+		"browser": false
+	},
+	"parserOptions": {
+		"Features": {
+			"experimentalObjectRestSpread": true,
+			"jsx": false
+		},
+		"sourceType": "module",
+		"requireConfigFile": false
+	},
+	"plugins": ["prettier", "sort-destructure-keys"],
+	"rules": {
+		"consistent-return": "off",
+		"indent": [
+			"error",
+			"tab",
+			{
+				"SwitchCase": 1
+			}
+		],
+		"linebreak-style": ["error", "unix"],
+		"no-console": "error",
+		"no-param-reassign": [
+			2,
+			{
+				"props": false
+			}
+		],
+		"no-tabs": "off",
+		"no-use-before-define": "error",
+		"no-underscore-dangle": "off",
+		"prettier/prettier": "error",
+		"sort-destructure-keys/sort-destructure-keys": [
+			"error",
+			{
+				"caseSensitive": true
+			}
+		],
+		"jest/no-hooks": "off",
+		"jest/prefer-expect-assertions": "off",
+		"jest/no-test-callback": "off",
+		"jest/expect-expect": "off",
+		"jest/consistent-test-it": "off"
+	}
+}
