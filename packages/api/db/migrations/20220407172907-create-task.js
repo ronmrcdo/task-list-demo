@@ -1,6 +1,6 @@
 module.exports = {
 	async up(queryInterface, Sequelize) {
-		await queryInterface.createTable('Tasks', {
+		await queryInterface.createTable('tasks', {
 			id: {
 				allowNull: false,
 				autoIncrement: true,
@@ -13,7 +13,7 @@ module.exports = {
 			userId: {
 				type: Sequelize.UUID,
 				references: {
-					model: 'Users',
+					model: 'users',
 					key: 'id',
 				},
 				onDelete: 'CASCADE',
@@ -28,7 +28,8 @@ module.exports = {
 			},
 		});
 	},
+	/* eslint-disable no-unused-vars */
 	async down(queryInterface, Sequelize) {
-		await queryInterface.dropTable('Tasks');
+		await queryInterface.dropTable('tasks');
 	},
 };

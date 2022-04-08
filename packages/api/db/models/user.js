@@ -1,4 +1,7 @@
 const { Model } = require('sequelize');
+const { hash } = require('bcryptjs');
+const { v4: uuidv4 } = require('uuid');
+const authConfig = require('../../config/auth');
 
 module.exports = (sequelize, DataTypes) => {
 	class User extends Model {
@@ -9,6 +12,7 @@ module.exports = (sequelize, DataTypes) => {
 		 */
 		static associate(models) {
 			// define association here
+			User.hasMany(models.Task);
 		}
 	}
 	User.init(
@@ -20,6 +24,15 @@ module.exports = (sequelize, DataTypes) => {
 		{
 			sequelize,
 			modelName: 'User',
+			tableName: 'users',
+			hooks: {
+				beforeCreate: async (user) => {
+					user.id = uuidv4();
+					if (user.password) {
+						user.password = await hash(user.password, authConfig.bcryptRound);
+					}
+				},
+			},
 		},
 	);
 	return User;
