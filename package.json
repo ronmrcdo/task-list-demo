@@ -8,7 +8,9 @@
   ],
   "scripts": {
     "start": "lerna run --parallel start",
-    "lint": "lerna run --parallel lint"
+    "lint": "lerna run --parallel lint",
+    "db:migrate": "lerna run --parallel db:migrate",
+    "db:seed": "lerna run --parallel db:seed"
   },
   "devDependencies": {
     "lerna": "^4.0.0"

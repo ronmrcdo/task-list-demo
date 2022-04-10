@@ -4,7 +4,6 @@
 1. Node v14+
 2. Yarn as package manager
 3. MySQL
-4. npx
 
 ## 🚀 Stack used
 1. Backend - (Node.js, Apollo, Graphql, MySQL, Sequelize, JWT)
@@ -29,15 +28,14 @@ DEV_DB_USERNAME=homestead
 DEV_DB_PASSWORD=secret
 ```
 5. Install the dependencies by running `yarn install`
-6. Run the migration to automatically create the tables in your mysql `npx sequelize-cli db:migrate`
+6. Run the migration to automatically create the tables in your mysql `yarn db:migrate`
 7. To serve the application locally, run `yarn start`
 
 ### 🌱 Seeding (Optional)
 
-To seed the users table. You need to run. on the `packages/api` folder
+To seed the users table. You need to run
 ```
-cd packages/api
-npx sequelize-cli db:seed:all
+yarn db:seed
 ```
 
 This will create a 2 user with credentials of
