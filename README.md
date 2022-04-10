@@ -16,7 +16,7 @@
 1. Clone the repository `git clone https://github.com/ronmrcdo/task-list-demo.git`
 2. Navigate to the project `cd task-list-demo`
 3. Copy the .env.example `cp packages/api/.env.example packages/api/.env`
-4. Update the .env at the `packages/api/.env` based on your server
+4. Update the .env at the `nano packages/api/.env` based on your server
 ```
 BCRYPT_ROUND=10
 JWT_SECRET=randomkeyofcourse
@@ -34,8 +34,9 @@ DEV_DB_PASSWORD=secret
 
 ### 🌱 Seeding (Optional)
 
-To seed the users table. You need to run.
+To seed the users table. You need to run. on the `packages/api` folder
 ```
+cd packages/api
 npx sequelize-cli db:seed:all
 ```
 
