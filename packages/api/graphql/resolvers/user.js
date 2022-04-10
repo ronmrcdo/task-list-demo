@@ -1,5 +1,5 @@
 const { compare } = require('bcryptjs');
-const { ApolloError } = require('apollo-server-express');
+const { ApolloError } = require('apollo-server');
 const { issueToken, serializeUser } = require('../../@core/auth');
 
 const resolvers = {
