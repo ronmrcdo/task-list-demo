@@ -27,7 +27,7 @@ DEV_DB_NAME=carelulu_core
 DEV_DB_USERNAME=homestead
 DEV_DB_PASSWORD=secret
 ```
-5. Install the dependencies by running `yarn install`
+5. Install the dependencies by running `yarn install`. This will install the modules of both backend and frontend in the workspace directory.
 6. Run the migration to automatically create the tables in your mysql `yarn db:migrate`
 7. To serve the application locally, run `yarn start`
 
